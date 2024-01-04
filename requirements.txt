@@ -1,0 +1,10 @@
+tensorflow
+torch
+kenlm
+pyctcdecode
+catboost
+transformers
+datasets
+numpy
+onnxruntime
+scipy
