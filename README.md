@@ -51,7 +51,7 @@ Here are the required libraries:
 
 If you encounter any issues during the installation, please check the respective library's documentation.
 
-3. Download the model files from the [Releases](https://github.com/EmotionEngineer/AutoLang/releases/tag/v1.0.0) section of the GitHub repository. The model files have been split into four parts: `models_part_aa`, `models_part_ab`, `models_part_ac`, and `models_part_ad`.
+3. Download the model files from the [Releases](https://github.com/EmotionEngineer/AutoLang/releases/tag/v1.0.0) section of the GitHub repository. The model files have been split into four parts: `models_part_aa`, `models_part_ab`, `models_part_ac`, and `models_part_ad`
 
 4. Reassemble and unzip the model files:
 
