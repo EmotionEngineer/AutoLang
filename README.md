@@ -21,7 +21,25 @@ Welcome to the AutoLang repository! This powerful tool transcribes audio files a
 
 ## Quick Start
 
-To use the program, clone the repository and run the `main.py` script with the necessary command-line arguments.
+To use the program, follow these steps:
+
+1. Clone the repository:
+
+```bash
+git clone https://github.com/EmotionEngineer/AutoLang.git
+cd AutoLang
+```
+
+2. Download the model files from the [Releases](https://github.com/EmotionEngineer/AutoLang/releases/tag/v1.0.0) section of the GitHub repository. The model files have been split into four parts: `models_part_aa`, `models_part_ab`, `models_part_ac`, and `models_part_ad`.
+
+3. Reassemble and unzip the model files:
+
+```bash
+cat models_part_aa models_part_ab models_part_ac models_part_ad > models.zip
+unzip models.zip
+```
+
+4. Run the `main.py` script with the necessary command-line arguments:
 
 ```bash
 python main.py -i <input_file_path> -m <model_path> -o <output_file_path> -s <speed> -v <volume> -p <processed_audio_path>
