@@ -58,7 +58,7 @@ The models used in this project were trained and evaluated in Kaggle notebooks. 
 
 ## License
 
-This project is licensed under the terms of the MIT license. See [LICENSE.md](LICENSE.md) for additional details.
+This project is licensed under the terms of the MIT license. See [LICENSE](LICENSE) for additional details.
 
 ## Acknowledgements
 
