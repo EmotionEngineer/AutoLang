@@ -81,9 +81,18 @@ class AudioProcessor:
         self.speed = speed
         self.volume = volume
 
+    def convert_to_mono(self):
+        """Convert a stereo audio file to mono"""
+        sampling_rate, data = wavfile.read(self.path)
+
+        if len(data.shape) > 1 and data.shape[1] > 1:
+            data = data.mean(axis=1)  # convert stereo to mono by averaging channels
+
+        return sampling_rate, data.astype(np.int16)  # ensure data type is int16
+
     def process_audio(self):
         """Process the audio file with the given speed and volume"""
-        sampling_rate, data = wavfile.read(self.path)
+        sampling_rate, data = self.convert_to_mono()  # convert to mono before processing
         new_length = int(data.shape[0] / self.speed)
         new_data = sps.resample(data, new_length) if self.speed != 1.0 else data
         new_data = new_data * self.volume
