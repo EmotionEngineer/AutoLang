@@ -60,10 +60,22 @@ cat models_part_aa models_part_ab models_part_ac models_part_ad > models.zip
 unzip models.zip
 ```
 
-5. Run the `main.py` script with the necessary command-line arguments:
+5. Run the `main.py` script with the necessary command-line arguments, including the `-l` or `--language` option to set the language manually ('EN', 'RU', or 'Auto'):
 
 ```bash
-python main.py -i <input_file_path> -m <model_path> -o <output_file_path> -s <speed> -v <volume> -p <processed_audio_path>
+python main.py -i <input_file_path> -m <model_path> -o <output_file_path> -s <speed> -v <volume> -p <processed_audio_path> -l <language>
+```
+
+For example, to transcribe an audio file and detect the language automatically:
+
+```bash
+python main.py -i path/to/audio.wav -o output.json
+```
+
+And to transcribe an audio file with a manually set language:
+
+```bash
+python main.py -i path/to/audio.wav -o output.json -l EN
 ```
 
 ## Command-line Arguments
@@ -74,6 +86,7 @@ python main.py -i <input_file_path> -m <model_path> -o <output_file_path> -s <sp
 - `-s`, `--speed`: Speed change of the audio file (Default: 1.0)
 - `-v`, `--volume`: Volume change of the audio file (Default: 1.0)
 - `-p`, `--path`: Path to save the processed audio file
+- `-l`, `--language`: Set the language manually (EN, RU) or leave it as Auto for auto-detection (Default: 'Auto')
 
 ## Components
 
